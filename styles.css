@@ -1,15 +1,15 @@
 /* Global Layout Set-up */
-* { 
+* {
   box-sizing: border-box;
 }
-  
+
 body {
   margin: 0;
   padding: 0;
   text-align: center;
   font-family: 'Roboto', sans-serif;
   color: #222;
-  background: #f7f5f0;
+  background: #fff1cf;
 }
 /* Link Styles */
 
@@ -25,7 +25,7 @@ a:hover {
 
 .main-nav {
   width: 100%;
-  background: black;
+  background: #263f44;
   min-height: 30px;
   padding: 10px;
   position: fixed;
@@ -41,9 +41,11 @@ a:hover {
 }
 
 .nav .name {
-    display: block;
-    margin-right: auto;
-    color: white;
+  display: block;
+  margin-right: auto;
+  color: white;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
 }
 .nav li {
   padding: 5px 10px 10px 10px;
@@ -55,9 +57,14 @@ a:hover {
   color: white
 }
 
+.nav a.selected{
+  color: white;
+  text-decoration: underline;
+}
+
 header {
   text-align: center;
-  background: url('images/portland.jpg') no-repeat top center ;
+  background: url('images/morocco.jpg') no-repeat center center ;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
@@ -74,19 +81,22 @@ header .profile-image {
   transition: all .5s;
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.1) rotate(-2deg);
 }
 .tag {
-  background-color: #efefef;
-  color: black;
+  background-color: #015668;
+  color: white;
   padding: 10px;
   border-radius: 5px;
   display: table;
   margin: 10px auto;
-} 
+  font-family: 'Shadows Into Light', cursive;
+}
 .location {
-  background-color: #222;
-  color: yellow;
+  background-color: transparent;
+  color: #ffd369;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
 }
 .card {
   margin: 30px;
@@ -99,7 +109,7 @@ header .profile-image:hover {
   transition: all .5s;
 }
 .card:hover {
-  border-color: #ff99ff;
+  border-color: #015668;
 }
 
 ul.skills {
@@ -110,14 +120,14 @@ ul.skills {
 .skills li {
   border-radius: 6px;
   display: inline-block;
-  background: #ff9904;
+  background: #ffd369;
   color: white;
   padding: 5px 10px;
   margin: 2px;
 }
 
 .skills li:nth-child(odd) {
-  background: #0399ff;
+  background: #015668;
 }
 
 footer {
@@ -160,6 +170,13 @@ a.linkedin {
 a.github {
   background-image: url(images/github.svg);
 }
+.location_icon{
+  padding-left: 25px;
+  background-image: url(images/pin.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px 20px;
+}
 a.social:hover {
   opacity: 1;
 }
@@ -169,10 +186,10 @@ a.social:hover {
 
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
-  
+
   .flex {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
-      display: flex; 
+      display: flex;
       max-width: 1200px;
       -ms-flex-pack: distribute;
       justify-content: space-around;
